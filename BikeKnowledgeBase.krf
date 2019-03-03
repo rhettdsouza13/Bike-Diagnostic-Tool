@@ -23,7 +23,19 @@
 (isa p2 BikePart)
 (comment p2 "Pad: Pads are small objects which have a rough surface and are part of the braking system of the bike. The pads can be pushed onto the rim or the rotor of a disc braked bike in order to create friction to slow down the bike.")
 
+(isa p15 BikePart)
+(comment p15 "Brakes: The brakes denote all the parts of the bike that are involved with braking and slowing down the bike.")
+
 ;;; Conditions
+(isa c1 PartCondition)
+(comment c1 "Squealing: A part that makes a long, high-pitched cry or noise.") 
+
+(isa c3 PartCondition)
+(Comment c3 "Smooth: Part that has an even and regular surface and is free from perceptible projections.")
+
+(isa c5 PartCondition)
+(Comment c5 "Dirty: Part is covered or marked with an unclean substance like sand, mud or oil.")
+
 (isa c7 PartCondition)
 (comment c7 "Outdated: A part which is too old or that has been longer used than recommend.")
 
@@ -31,6 +43,12 @@
 (comment c9 "Misplaced: The part is incorrectly positioned or has a wrong orientation.")
 
 ;;; Resolutions
+(isa r1 ProblemResolution)
+(comment r1 "Clean pad with alcohol.")
+
+(isa r2 ProblemResolution)
+(comment r2 "Buff parts with steel wool.")
+     
 (isa r3 ProblemResolution)
 (comment r3 "Toe in the brake pads.")
 
@@ -51,9 +69,12 @@
 (comment solvesProblem "A relation indicating that the problem caused by the given symptom function can be solved by the given problem resolution.")
 
 ;;; Which resolution solves which symptoms / problems
-(solvesProblem (SymptomFn c7 p2) r4)
-(solvesProblem (SymptomFn c9 p1 c9 p2) r3)
+(solvesProblem (SymptomFn c1 p15 c7 p2) (ListFn r4))
+(solvesProblem (SymptomFn c1 p15 c9 p1 c9 p2) (ListFn r3))
+(solvesProblem (SymptomFn c1 p15 c5 p1 c5 p2 c3 p1 c3 p2) (ListFn r1 r2))
 
 ;;; The query
-(<== (solvesProblem ?symp ?res))
+(<== (solvesProblem ?symp ?res)
+	(listMemberType ?res ProblemResolution))
+
 
