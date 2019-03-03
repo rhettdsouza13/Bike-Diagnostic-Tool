@@ -1,5 +1,7 @@
 (in-microtheory KRR-Winter2019FactsMt)
 
+
+
 ;;; Collections
 
 (isa BikePart FirstOrderCollection)
@@ -14,19 +16,24 @@
 (genls ProblemResolution SolutionStepEventType)
 (comment ProblemResolution "The collection of all bike problem resolutions.")
 
+
+
 ;;; Facts
 
 ;;; Parts
 (isa p1 BikePart)
-(comment p1 "Rim: The rim is the outer edge of a wheel, on which the tire is fitted. Usually a rim is made out of metal and can be seen from the side of the wheel. Furthermore, the spokes are mounted at the rim and keep the rim in shape if a heavy object sits on the bike.")
+(comment p1 "Rim: The rim is the outer edge of a wheel, on which the tire is fitted and is made out of metal. Furthermore, the spokes are mounted at the rim and keep the rim in shape if a heavy object sits on the bike.")
 
 (isa p2 BikePart)
-(comment p2 "Pad: Pads are small objects which have a rough surface and are part of the braking system of the bike. The pads can be pushed onto the rim or the rotor of a disc braked bike in order to create friction to slow down the bike.")
+(comment p2 "Pad: Pads are small objects which have a rough surface and are part of the bike's braking system. The pads can be pushed onto the rim or the rotor of a disc braked bike in order to create friction to slow down the bike.")
 
 (isa p15 BikePart)
 (comment p15 "Brakes: The brakes denote all the parts of the bike that are involved with braking and slowing down the bike.")
 
+
+
 ;;; Conditions
+
 (isa c1 PartCondition)
 (comment c1 "Squealing: A part that makes a long, high-pitched cry or noise.") 
 
@@ -42,7 +49,10 @@
 (isa c9 PartCondition)
 (comment c9 "Misplaced: The part is incorrectly positioned or has a wrong orientation.")
 
+
+
 ;;; Resolutions
+
 (isa r1 ProblemResolution)
 (comment r1 "Clean pad with alcohol.")
 
@@ -55,6 +65,9 @@
 (isa r4 ProblemResolution)
 (comment r4 "Replace with new pads.")
 
+
+
+
 ;;; This function should allow us to enter multiple symptoms
 (isa SymptomFn VariableArityFunction)
 (arity SymptomFn n-ary)
@@ -65,7 +78,7 @@
 (isa solvesProblem DirectBinaryPredicate)
 (arity solvesProblem 2)
 (arg1Isa solvesProblem Entity)
-(arg2Isa solvesProblem ProblemResolution)
+(arg2Isa solvesProblem List)
 (comment solvesProblem "A relation indicating that the problem caused by the given symptom function can be solved by the given problem resolution.")
 
 ;;; Which resolution solves which symptoms / problems
