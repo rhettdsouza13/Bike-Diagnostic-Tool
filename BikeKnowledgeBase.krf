@@ -16,6 +16,10 @@
 (genls ProblemResolution SolutionStepEventType)
 (comment ProblemResolution "The collection of all bike problem resolutions.")
 
+(isa DefectSymptom FirstOrderCollection)
+(comment DefectSymptom "The collection of possible combinations of bike parts and conditions that cause a defect.")
+
+
 
 
 ;;; Facts
@@ -70,24 +74,25 @@
 
 ;;; This function should allow us to enter multiple symptoms
 (isa SymptomFn VariableArityFunction)
-(arity SymptomFn n-ary)
-(resultIsa SymptomFn Entity)
-(comment SymptomFn “A symptom that includes the given parts and conditions.”)
+(arity SymptomFn 2)
+(resultIsa SymptomFn DefectSymptom)
+(comment SymptomFn “A symptom that includes the given part and condition.”)
 
 ;;; Predicate type that relates symptoms to resolutions
 (isa solvesProblem DirectBinaryPredicate)
 (arity solvesProblem 2)
-(arg1Isa solvesProblem Entity)
+(arg1Isa solvesProblem List)
 (arg2Isa solvesProblem List)
-(comment solvesProblem "A relation indicating that the problem caused by the given symptom function can be solved by the given problem resolution.")
+(comment solvesProblem "A relation indicating that the problem caused by the listed symptoms can be solved by the given list of problem resolutions.")
 
 ;;; Which resolution solves which symptoms / problems
-(solvesProblem (SymptomFn c1 p15 c7 p2) (ListFn r4))
-(solvesProblem (SymptomFn c1 p15 c9 p1 c9 p2) (ListFn r3))
-(solvesProblem (SymptomFn c1 p15 c5 p1 c5 p2 c3 p1 c3 p2) (ListFn r1 r2))
+(solvesProblem (ListFn (SymptomFn c1 p15) (SymptomFn c7 p2)) (ListFn r4))
+(solvesProblem (ListFn (SymptomFn c1 p15) (SymptomFn c9 p1) (SymptomFn c9 p2)) (ListFn r3))
+(solvesProblem (ListFn (SymptomFn c1 p15) (SymptomFn c5 p1) (SymptomFn c5 p2) (SymptomFn c3 p1) (SymptomFn c3 p2)) (ListFn r1 r2))
 
 ;;; The query
-(<== (solvesProblem ?symp ?res)
+(<== (solvesProblem ?sym ?res)
+	(listMemberType ?sym DefectSymptom)
 	(listMemberType ?res ProblemResolution))
 
 
