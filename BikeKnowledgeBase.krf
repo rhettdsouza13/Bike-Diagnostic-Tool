@@ -92,13 +92,11 @@
 (solvesProblem (ListFn (SymptomFn c1 p15) (SymptomFn c5 p1) (SymptomFn c5 p2) (SymptomFn c3 p1) (SymptomFn c3 p2)) (ListFn r1 r2))
 
 ;;; The query
-(<== (solvesProblem ?symptoms ?resolutions)
-	(listMemberType ?symptoms ProblemSymptom)
-	(listMemberType ?resolutions ProblemResolution))
+(solvesProblem ?symptoms ?resolutions)
 
-;;; (<== (mightSolveProblem ?symptoms ?resolutions)
-;;; 	(solvesProblem ?required ?resolutions)
-;;; 	(isa ?symptoms List)
-;;; 	(listMemberType ?symptoms ProblemSymptom)
-;;; 	(evaluate True (contains ?required ?symptoms)))
+(<== (mightSolveProblem ?symptoms ?resolutions)
+	(solvesProblem ?required ?resolutions)
+	(isa ?symptoms List)
+	(listMemberType ?symptoms ProblemSymptom)
+	(subsetOf ?symptoms ?required))
 
