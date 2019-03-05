@@ -98,5 +98,5 @@
 	(solvesProblem ?required ?resolutions)
 	(isa ?symptoms List)
 	(listMemberType ?symptoms ProblemSymptom)
-	(subsetOfBindings ?symptoms ?required))
+	(subsetOf (ListToSetFn ?symptoms) (ListToSetFn ?required)))
 
