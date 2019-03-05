@@ -98,7 +98,7 @@
 ;;; Rules
 
 ;;; This rule allows us to find possible solutions for a given set of symptoms
-(<== (mightSolveProblem ?symptoms ?resolutions)
+(<== (partOfRequiredSymptoms ?symptoms ?required ?resolutions)
 	(solvesProblem ?required ?resolutions)
 	(subsetOf ?symptoms ?required))
 
@@ -108,4 +108,4 @@
 
 (solvesProblem ?symptoms ?resolutions)
 
-(mightSolveProblem (TheSet (SymptomFn c7 p2)) ?resolutions)
+(partOfRequiredSymptoms (TheSet (SymptomFn c7 p2)) ?required ?resolutions)
