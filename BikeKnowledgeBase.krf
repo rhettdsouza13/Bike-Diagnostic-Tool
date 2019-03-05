@@ -71,6 +71,8 @@
 
 
 
+;;; Predicates / Functions
+
 ;;; This function should allow us to enter multiple symptoms
 (isa SymptomFn BinaryFunction)
 (arity SymptomFn 2)
@@ -91,10 +93,19 @@
 (solvesProblem (TheSet (SymptomFn c1 p15) (SymptomFn c9 p1) (SymptomFn c9 p2)) (ListFn r3))
 (solvesProblem (TheSet (SymptomFn c1 p15) (SymptomFn c5 p1) (SymptomFn c5 p2) (SymptomFn c3 p1) (SymptomFn c3 p2)) (ListFn r1 r2))
 
-;;; The query
-(solvesProblem ?symptoms ?resolutions)
 
+
+;;; Rules
+
+;;; This rule allows us to find possible solutions for a given set of symptoms
 (<== (mightSolveProblem ?symptoms ?resolutions)
 	(solvesProblem ?required ?resolutions)
 	(subsetOf ?symptoms ?required))
 
+
+
+;;; Queries
+
+(solvesProblem ?symptoms ?resolutions)
+
+(mightSolveProblem (TheSet (SymptomFn c7 p2)) ?resolutions)
