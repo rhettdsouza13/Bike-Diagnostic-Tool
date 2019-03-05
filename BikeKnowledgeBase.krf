@@ -82,21 +82,19 @@
 ;;; Predicate type that relates symptoms to resolutions
 (isa solvesProblem DirectBinaryPredicate)
 (arity solvesProblem 2)
-(arg1Isa solvesProblem List)
+(arg1Isa solvesProblem Set)
 (arg2Isa solvesProblem List)
 (comment solvesProblem "A relation indicating that the problem caused by the listed symptoms can be solved by the given list of problem resolutions.")
 
 ;;; Which resolution solves which symptoms / problems
-(solvesProblem (ListFn (SymptomFn c1 p15) (SymptomFn c7 p2)) (ListFn r4))
-(solvesProblem (ListFn (SymptomFn c1 p15) (SymptomFn c9 p1) (SymptomFn c9 p2)) (ListFn r3))
-(solvesProblem (ListFn (SymptomFn c1 p15) (SymptomFn c5 p1) (SymptomFn c5 p2) (SymptomFn c3 p1) (SymptomFn c3 p2)) (ListFn r1 r2))
+(solvesProblem (TheSet (SymptomFn c1 p15) (SymptomFn c7 p2)) (ListFn r4))
+(solvesProblem (TheSet (SymptomFn c1 p15) (SymptomFn c9 p1) (SymptomFn c9 p2)) (ListFn r3))
+(solvesProblem (TheSet (SymptomFn c1 p15) (SymptomFn c5 p1) (SymptomFn c5 p2) (SymptomFn c3 p1) (SymptomFn c3 p2)) (ListFn r1 r2))
 
 ;;; The query
 (solvesProblem ?symptoms ?resolutions)
 
 (<== (mightSolveProblem ?symptoms ?resolutions)
 	(solvesProblem ?required ?resolutions)
-	(isa ?symptoms List)
-	(listMemberType ?symptoms ProblemSymptom)
-	(subsetOf (ListToSetFn ?symptoms) (ListToSetFn ?required)))
+	(subsetOf ?symptoms ?required))
 
