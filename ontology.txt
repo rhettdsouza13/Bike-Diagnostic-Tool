@@ -1,0 +1,15 @@
+Error	Symptoms	Resolutions	PartCode	Part	PartComment	ConditionCode	Condition	ConditionComment	ResolutionCode	Resolution
+Dirty Brakesystem	"(['C4', 'P3'], ['C4', 'P1'])"	"['R1', 'R2']"	P1	Rim	"Rim: The rim is the outer edge of a wheel, on which the tire is fitted and is made out of metal. Furthermore, the spokes are mounted at the rim and keep the rim in shape if a heavy object sits on the bike."	C1	Squealing	"Part makes a long, high-pitched cry or noise."	R1	Clean BrakePad with alcohol
+Dirty Brakesystem	"(['C1', 'P3'],)"	"['R1', 'R2']"	P2	Chain	Chain: The chain is the part of the bike that transfers the energy from the pedals into the cogs of the rear wheel	C2	Stiff	Hard to move	R2	Add Lube to Chain
+Dirty Brakesystem	"(['C1', 'P1'],)"	"['R1', 'R2']"	P3	BrakePad	Brake Pad: The brake pad is the part of the brakes that come into contact with the rim of the wheels	C3	Skipping	Losing contact	R3	Buff BrakePad with Steel Wool
+Rusty Chain	"(['C1', 'P2'],)"	['R2']	P4	BiggestCog	Biggest Cog: The largest sized cog in the rear set of gears	C4	Rubbing	When two parts are coming into contact in motion	R4	Tighten Rear Derailleur cable
+Rusty Chain	"(['C3', 'P2'],)"	['R2']	P5	SmallestCog	Smallest Cog: The smallest sized cog in the rear set of gears	C5	CantShift	The cyclist cannot shift to a specific gear	R5	Loosen Rear Derailleur cable
+Cassette won't go into biggest cog	"(['C5', 'P4'],)"	['R4']	P6	BiggestFrontRing	Biggest Front Ring: The largest sized gear in the front set of chainrings	C6	CantPullEnough	The cyclist cannot pull to the point of effect	R6	Loosen Front Derailleur cable
+Cassette won't go into smallest cog	"(['C5', 'P5'],)"	['R5']	P7	SmallestFrontRing	Smallest Front Ring: The smallest gear in the front set of chainrings	C7	Creaky	Part makes a creaking sound	R7	Tighten Front Derailleur cable
+Front won't shift onto biggest front chainring	"(['C5', 'P6'],)"	['R6']	P8	BrakeLever	Brake Lever: The lever that is attached to the handlebars that control the brakes	C8	AlreadyTightened	Part is already tightened	R8	Tighten Lever Cable
+Front won't shift onto smallest front chainring	"(['C5', 'P7'],)"	['R7']	P9	Pedals	Pedals: The surface that the cyclist puts their feet on to exert force	C9	Wobbly	Part is unstable and moves in an incorrect manner	R9	Tighten Pedal Bolt
+Not Enough Brake Lever Room	"(['C6', 'P8'],)"	['R8']	P10	Handlebars	Handlebars: The bars in the front of the bike that the cyclist holds onto to control the direction of the bike				R10	Tighten Stem Bolts
+Loose Pedals	"(['C7', 'P9'],)"	['R9']	P11	Stem	Stem: The component in the front of the bike that attaches the handlebars to the bike				R11	Tighten the bolts on the attachment of steerer to stem
+Loose Stem	"(['C7', 'P10'],)"	['R10']	P12	Wheel	Wheel: The rotating part of the bike that lets the frame roll across the ground				R12	Remove Wheel from dropouts and re-secure and tighten
+Loose Stem Attachment	"(['C7', 'P10'], ['C9', 'P12'])"	['R11']								
+Loose Wheel	"(['C7', 'P12'], ['C9', 'P12'])"	['R12']								
