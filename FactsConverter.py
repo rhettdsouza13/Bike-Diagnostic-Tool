@@ -28,6 +28,7 @@ filecontent = """(in-microtheory KRR-Winter2019FactsMt)
 (comment ProblemResolution "The collection of all bike problem resolutions.")
 
 (isa ProblemSymptom FirstOrderCollection)
+(genls ProblemSymptom ProblemToBeSolved)
 (comment ProblemSymptom "The collection of possible combinations of bike parts and conditions that cause a defect/problem.")
 
 ;;; Predicates / Functions
@@ -41,11 +42,21 @@ filecontent = """(in-microtheory KRR-Winter2019FactsMt)
 (comment SymptomFn “A symptom that includes the given part and condition.”)
 
 ;;; Predicate type that relates symptoms to resolutions
+(solvesProblem ?symptoms ?resolutions)
 (isa solvesProblem DirectBinaryPredicate)
 (arity solvesProblem 2)
 (arg1Isa solvesProblem Set)
 (arg2Isa solvesProblem List)
 (comment solvesProblem "A relation indicating that the problem caused by the listed symptoms can be solved by the given list of problem resolutions.")
+
+;;; Predicate that provides required symptoms given some Resolutions
+(partOfRequiredSymptoms ?symptoms ?required ?resolutions)
+(isa partOfRequiredSymptoms TernaryPredicate)
+(arity partOfRequiredSymptoms 3)
+(arg1Isa partOfRequiredSymptoms Set)
+(arg2Isa partOfRequiredSymptoms Set)
+(arg3Isa partOfRequiredSymptoms List)
+(comment partOfRequiredSymptoms "A relation that provides a list of required symptoms for a particular set of resolutions given the subset of provided symptoms")
 
 ;;; Rules
 
@@ -56,9 +67,7 @@ filecontent = """(in-microtheory KRR-Winter2019FactsMt)
 
 ;;; Queries
 
-(solvesProblem ?symptoms ?resolutions)
-
-(partOfRequiredSymptoms (TheSet (SymptomFn c7 p2)) ?required ?resolutions)
+;;;(partOfRequiredSymptoms (TheSet (SymptomFn Rubbing BrakePad)) ?required ?resolutions)
 
 ;;; Facts
 
