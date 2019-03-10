@@ -1,6 +1,9 @@
 (in-microtheory KRR-Winter2019FactsMt)
 
+
+
 ;;; Collections
+
 (isa BikePart FirstOrderCollection)
 (genls BikePart Device)
 (comment BikePart "The collection of all bike parts.")
@@ -16,6 +19,8 @@
 (isa ProblemSymptom FirstOrderCollection)
 (genls ProblemSymptom ProblemToBeSolved)
 (comment ProblemSymptom "The collection of possible combinations of bike parts and conditions that cause a defect/problem.")
+
+
 
 ;;; Predicates / Functions
 
@@ -43,6 +48,11 @@
 (arg2Isa partOfRequiredSymptoms Set)
 (arg3Isa partOfRequiredSymptoms List)
 (comment partOfRequiredSymptoms "A relation that provides a list of required symptoms for a particular set of resolutions given the subset of provided symptoms")
+;;; The first parameter describes the symptoms the user experienced
+;;; The second parameter describes the symptoms that are required for the resolutions to work
+;;; The third parameter is the possible resolution itself
+
+
 
 ;;; Rules
 
@@ -51,9 +61,13 @@
 	(solvesProblem ?required ?resolutions)
 	(subsetOf ?symptoms ?required))
 
+
+
 ;;; Queries
 
-;;;(partOfRequiredSymptoms (TheSet (SymptomFn Rubbing BrakePad)) ?required ?resolutions)
+;;; (partOfRequiredSymptoms (TheSet (SymptomFn Rubbing BrakePad)) ?required ?resolutions)
+
+
 
 ;;; Facts
 
@@ -97,6 +111,7 @@
 
 
 ;;; Conditions
+
 (isa Squealing PartCondition)
 (comment Squealing "Part makes a long, high-pitched cry or noise.")
 
@@ -127,6 +142,7 @@
 
 
 ;;; Resolutions
+
 (isa R1 ProblemResolution)
 (comment R1 "Clean BrakePad with alcohol")
 
@@ -163,7 +179,10 @@
 (isa R12 ProblemResolution)
 (comment R12 "Remove Wheel from dropouts and re-secure and tighten")
 
+
+
 ;;; Which resolution solves which symptoms/problems
+
 (solvesProblem (TheSet (SymptomFn Rubbing BrakePad) (SymptomFn Rubbing Rim)) (ListFn R1 R2))
 (solvesProblem (TheSet (SymptomFn Squealing BrakePad)) (ListFn R1 R2))
 (solvesProblem (TheSet (SymptomFn Squealing Rim)) (ListFn R1 R2))
