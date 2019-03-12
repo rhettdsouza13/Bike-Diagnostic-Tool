@@ -1,0 +1,21 @@
+(in-microtheory KRR-BikeTest)
+
+
+
+
+(causesProblem (TheSet (SymptomFn rubbing brakes) (SymptomFn misplaced pads) (SymptomFn misplaced rotor)) rubbingMisplacedDiscPads)
+(causesProblem (TheSet (SymptomFn rubbing brakes) (SymptomFn worn rotor)) rubbingBrokenRotor)
+(causesProblem (TheSet (SymptomFn rubbing brakes) (SymptomFn bent rotor)) rubbingBrokenRotor)
+(causesProblem (TheSet (SymptomFn rubbing brakes) (SymptomFn tooClose pads) (SymptomFn tooClose rotor)) rubbingMisspacedDiscPads)
+
+(causesProblem (TheSet (SymptomFn weak brakes) (SymptomFn hits lever) (SymptomFn hits handlebar)) weakBrakeLever)
+(causesProblem (TheSet (SymptomFn weak brakes) (SymptomFn worn pads)) weakWornPads)
+(causesProblem (TheSet (SymptomFn weak brakes) (SymptomFn farApart rim) (SymptomFn farApart pads)) weakFarRimPads)
+(causesProblem (TheSet (SymptomFn weak brakes) (SymptomFn misplaced pads)) weakMisplacedPads)
+(causesProblem (TheSet (SymptomFn weak brakes) (SymptomFn dirty rim) (SymptomFn dirty pads)) weakDirtyRimBrakes)
+(causesProblem (TheSet (SymptomFn weak brakes) (SymptomFn farApart pads) (SymptomFn farApart rotor)) weakFarDiscPads)
+(causesProblem (TheSet (SymptomFn weak brakes) (SymptomFn abnormalMovement cableHousing)) weakBrakeCable)
+(causesProblem (TheSet (SymptomFn weak brakes) (SymptomFn cracked brakeHousing)) weakBrakeHousing)
+(causesProblem (TheSet (SymptomFn weak brakes) (SymptomFn dirty pads) (SymptomFn dirty rotor)) weakDirtyDiscBrakes)
+
+(causesProblem (TheSet (SymptomFn squealing chain) (SymptomFn rusty chain)) squealingChain)
