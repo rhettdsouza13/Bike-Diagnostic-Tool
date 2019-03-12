@@ -1,0 +1,84 @@
+(in-microtheory KRR-BikeTest)
+
+
+
+;;; Parts
+(isa rim BikePart)	
+(comment rim "The rim is the outer edge of a wheel, on which the tire is fitted. Usually a rim is made out of metal. Furthermore, the spokes are mounted at the rim and keep the rim in shape if a heavy object sits on the bike.")	
+;;; (code rim "P1")
+
+(isa pads BikePart)	
+(comment pads "Pads are small objects which have a rough surface and are part of the braking system of the bike. The pads can be pushed onto the rim or the rotor of a disc braked bike in order to create friction to slow down the bike.")
+;;; (code pads "P2")
+
+(isa rotor BikePart)	
+(comment rotor "A rotor is mounted and the center of a wheel and is the counter part for the pads of a disc braked bike. The rotor has a rough surface is made out of metal and only has a braking purpose.")	
+;;; (code rotor "P3")
+
+(isa wheel BikePart)	
+(comment wheel "A circular object that revolves on an axle and is fixed below a bike or to enable it to move easily over the ground.")	
+;;; (code wheel "P4")
+
+(isa dropouts BikePart)	
+(comment dropouts "A U-shaped slot at the end of a fork on a bicycle, made to receive the axle and enabling the wheel to be changed rapidly.")	
+;;; (code dropouts "P5")
+
+(isa nipple BikePart)	
+(comment nipple "The little thingies that the spokes screw into at the rim and put the spoke on tension so that the rim does not collapse.")	
+;;; (code nipple "P6")
+
+(isa spoke BikePart)	
+(comment spoke "One of the bars or wire rods connecting the center of a wheel to its outer edge, so that the wheel does not collapse while a force is pushing onto it. The spokes spread the force equally to all sides of the wheel.")	
+;;; (code spoke "P7")
+
+(isa lever BikePart)	
+(comment lever "A projecting arm or handle that is moved to operate a mechanism. Usually a bike uses levers to activate the braking mechanism of the bike.")	
+;;; (code lever "P8")
+
+(isa brakeCable BikePart)	
+(comment brakeCable "A thin metal cable that connects the lever with the braking system of the bike. The cable "transports" the force which has been injected by the human to the brakes or the shifting mechanism of the bike.")	
+;;; (code brakeCable "P9")
+
+(isa brakeTensionScrew BikePart)	
+(comment brakeTensionScrew "The brake tension screw is mounted near the lever. By turning the screw you can increase/decrease the length of the brake cable. As a result, the lever can be pulled further or less further to the handlebar.")
+;;; (code brakeTensionScrew "P10")
+
+(isa brakeHousing BikePart)	
+(comment brakeHousing "The brake housing is a part of a disc braked bike that contains the pads for braking the bike. The rotor of the bike goes through the brake housing and rotates if the bike is in motion.")	
+;;; (code brakeHousing "P11")
+
+(isa calipers BikePart)	
+(comment calipers "The brake caliper holds the braking pads. The rim or the rotor of the bike run through the caliper. If the operator pulls the brake lever on the bike the caliper pushes the pads onto the rim or the rotor in order tto stop the bike.")	
+;;; (code calipers "P12")
+
+(isa cableHousing BikePart)	
+(comment cableHousing "The braking cables and the shifting cables usually run inside a small housing that protects the cables from the external environment.")	
+;;; (code cableHousing "P13")
+
+(isa adjustingKnob BikePart)	
+(comment adjustingKnob "Knob that is at the side of the disc brake housing which can be turned in order to move the braking pads closer to the rotor or further away from the rotor.")	
+;;; (code adjustingKnob "P14")
+
+(isa brakes BikePart)	
+(comment brakes "The system of the bike that cause the bike to slow down.")	
+;;; (code brakes "P15")
+
+(isa handlebar BikePart)	
+(comment handlebar "The steering bar of a bicycle, motorcycle, scooter, or other vehicle, with a handgrip at each end.")	
+;;; (code handlebar "P16")
+
+(isa chain BikePart)	
+(comment chain "The chain is the part of the bike that transfers the energy from the pedals into the cogs of the rear wheel.")	
+;;; (code chain "P17")
+
+(isa pedals BikePart)	
+(comment pedals "The surface that the cyclist puts their feet on to exert force")	
+;;; (code pedals "P18")
+
+(isa stem BikePart)	
+(comment stem "The component in the front of the bike that attaches the handlebars to the bike.")	
+;;; (code stem "P19")
+
+(isa cog BikePart)	
+(comment cog "A wheel or bar with a series of projections on its edge, which transfers motion by engaging with projections on another wheel or bar")	
+;;; (code cog "P20")
