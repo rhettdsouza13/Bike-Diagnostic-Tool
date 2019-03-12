@@ -32,3 +32,17 @@
 ;;; (arg1Isa code Thing)
 ;;; (arg2Isa code CharacterString)
 ;;; (comment code "Indicates what the shortcut or code for this fact is.")
+
+(isa mightCauseProblem TernaryPredicate)
+(arity mightCauseProblem 3)
+(arg1Isa mightCauseProblem Set)
+(arg2Isa mightCauseProblem Set)
+(arg3Isa mightCauseProblem BikeDefect)
+(comment mightCauseProblem "Returns an error that is caused by a particular set of problems")
+
+(isa mightSolveProblem TernaryPredicate)
+(arity mightSolveProblem 3)
+(arg1Isa mightSolveProblem Set)
+(arg2Isa mightSolveProblem Set)
+(arg3Isa mightSolveProblem ProblemResolution)
+(comment mightSolveProblem "Returns resolution that solves a particular set of problems")
