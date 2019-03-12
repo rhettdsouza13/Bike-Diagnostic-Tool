@@ -30,443 +30,443 @@
 
 ;;; Parts
 (isa rim BikePart)	
-(comment rim 'The rim is the outer edge of a wheel, on which the tire is fitted. Usually a rim is made out of metal. Furthermore, the spokes are mounted at the rim and keep the rim in shape if a heavy object sits on the bike.')	
-;;; (code rim 'P1')
+(comment rim "The rim is the outer edge of a wheel, on which the tire is fitted. Usually a rim is made out of metal. Furthermore, the spokes are mounted at the rim and keep the rim in shape if a heavy object sits on the bike.")	
+;;; (code rim "P1")
 
 (isa pads BikePart)	
-(comment pads 'Pads are small objects which have a rough surface and are part of the braking system of the bike. The pads can be pushed onto the rim or the rotor of a disc braked bike in order to create friction to slow down the bike.')
-;;; (code pads 'P2')
+(comment pads "Pads are small objects which have a rough surface and are part of the braking system of the bike. The pads can be pushed onto the rim or the rotor of a disc braked bike in order to create friction to slow down the bike.")
+;;; (code pads "P2")
 
 (isa rotor BikePart)	
-(comment rotor 'A rotor is mounted and the center of a wheel and is the counter part for the pads of a disc braked bike. The rotor has a rough surface is made out of metal and only has a braking prupose.')	
-;;; (code rotor 'P3')
+(comment rotor "A rotor is mounted and the center of a wheel and is the counter part for the pads of a disc braked bike. The rotor has a rough surface is made out of metal and only has a braking purpose.")	
+;;; (code rotor "P3")
 
 (isa wheel BikePart)	
-(comment wheel 'A circular object that revolves on an axle and is fixed below a bike or to enable it to move easily over the ground.')	
-;;; (code wheel 'P4')
+(comment wheel "A circular object that revolves on an axle and is fixed below a bike or to enable it to move easily over the ground.")	
+;;; (code wheel "P4")
 
 (isa dropouts BikePart)	
-(comment dropouts 'A U-shaped slot at the end of a fork on a bicycle, made to receive the axle and enabling the wheel to be changed rapidly.')	
-;;; (code dropouts 'P5')
+(comment dropouts "A U-shaped slot at the end of a fork on a bicycle, made to receive the axle and enabling the wheel to be changed rapidly.")	
+;;; (code dropouts "P5")
 
 (isa nipple BikePart)	
-(comment nipple 'The little thingies that the spokes screw into at the rim and put the spoke on tension so that the rim does not collapse.')	
-;;; (code nipple 'P6')
+(comment nipple "The little thingies that the spokes screw into at the rim and put the spoke on tension so that the rim does not collapse.")	
+;;; (code nipple "P6")
 
 (isa spoke BikePart)	
-(comment spoke 'One of the bars or wire rods connecting the center of a wheel to its outer edge, so that the wheel does not collapse while a force is pushing onto it. The spokes spread the force equally to all sides of the wheel.')	
-;;; (code spoke 'P7')
+(comment spoke "One of the bars or wire rods connecting the center of a wheel to its outer edge, so that the wheel does not collapse while a force is pushing onto it. The spokes spread the force equally to all sides of the wheel.")	
+;;; (code spoke "P7")
 
 (isa lever BikePart)	
-(comment lever 'A projecting arm or handle that is moved to operate a mechanism. Usually a bike uses levers to activate the braking mechanism of the bike.')	
-;;; (code lever 'P8')
+(comment lever "A projecting arm or handle that is moved to operate a mechanism. Usually a bike uses levers to activate the braking mechanism of the bike.")	
+;;; (code lever "P8")
 
 (isa brakeCable BikePart)	
-(comment brakeCable 'A thin metal cable that connects the lever with the braking system of the bike. The cable "transports" the force which has been injected by the human to the brakes or the shifting mechanism of the bike.')	
-;;; (code brakeCable 'P9')
+(comment brakeCable "A thin metal cable that connects the lever with the braking system of the bike. The cable "transports" the force which has been injected by the human to the brakes or the shifting mechanism of the bike.")	
+;;; (code brakeCable "P9")
 
 (isa brakeTensionScrew BikePart)	
-(comment brakeTensionScrew 'The brake tension screw is mounted near the lever. By turning the screw you can increase/decrease the length of the brake cable. As a result, the lever can be pulled further or less further to the handlebar.')
-;;; (code brakeTensionScrew 'P10')
+(comment brakeTensionScrew "The brake tension screw is mounted near the lever. By turning the screw you can increase/decrease the length of the brake cable. As a result, the lever can be pulled further or less further to the handlebar.")
+;;; (code brakeTensionScrew "P10")
 
 (isa brakeHousing BikePart)	
-(comment brakeHousing 'The brake housing is a part of a disc braked bike that contains the pads for braking the bike. The rotor of the bike goes through the brake housing and rotates if the bike is in motion.')	
-;;; (code brakeHousing 'P11')
+(comment brakeHousing "The brake housing is a part of a disc braked bike that contains the pads for braking the bike. The rotor of the bike goes through the brake housing and rotates if the bike is in motion.")	
+;;; (code brakeHousing "P11")
 
 (isa calipers BikePart)	
-(comment calipers 'The brake caliper holds the braking pads. The rim or the rotor of the bike run through the caliper. If the operator pulls the brake lever on the bike the caliper pushes the pads onto the rim or the rotor in order tto stop the bike.')	
-;;; (code calipers 'P12')
+(comment calipers "The brake caliper holds the braking pads. The rim or the rotor of the bike run through the caliper. If the operator pulls the brake lever on the bike the caliper pushes the pads onto the rim or the rotor in order tto stop the bike.")	
+;;; (code calipers "P12")
 
 (isa cableHousing BikePart)	
-(comment cableHousing 'The braking cables and the shifting cables usually run inside a small housing that protects the cables from the external environment.')	
-;;; (code cableHousing 'P13')
+(comment cableHousing "The braking cables and the shifting cables usually run inside a small housing that protects the cables from the external environment.")	
+;;; (code cableHousing "P13")
 
 (isa adjustingKnob BikePart)	
-(comment adjustingKnob 'Knob that is at the side of the disc brake housing which can be turned in order to move the braking pads closer to the rotor or further away from the rotor.')	
-;;; (code adjustingKnob 'P14')
+(comment adjustingKnob "Knob that is at the side of the disc brake housing which can be turned in order to move the braking pads closer to the rotor or further away from the rotor.")	
+;;; (code adjustingKnob "P14")
 
 (isa brakes BikePart)	
-(comment brakes 'The system of the bike that cause the bike to slow down.')	
-;;; (code brakes 'P15')
+(comment brakes "The system of the bike that cause the bike to slow down.")	
+;;; (code brakes "P15")
 
 (isa handlebar BikePart)	
-(comment handlebar 'The steering bar of a bicycle, motorcycle, scooter, or other vehicle, with a handgrip at each end.')	
-;;; (code handlebar 'P16')
+(comment handlebar "The steering bar of a bicycle, motorcycle, scooter, or other vehicle, with a handgrip at each end.")	
+;;; (code handlebar "P16")
 
 (isa chain BikePart)	
-(comment chain 'The chain is the part of the bike that transfers the energy from the pedals into the cogs of the rear wheel.')	
-;;; (code chain 'P17')
+(comment chain "The chain is the part of the bike that transfers the energy from the pedals into the cogs of the rear wheel.")	
+;;; (code chain "P17")
 
 (isa pedals BikePart)	
-(comment pedals 'The surface that the cyclist puts their feet on to exert force')	
-;;; (code pedals 'P18')
+(comment pedals "The surface that the cyclist puts their feet on to exert force")	
+;;; (code pedals "P18")
 
 (isa stem BikePart)	
-(comment stem 'The component in the front of the bike that attaches the handlebars to the bike.')	
-;;; (code stem 'P19')
+(comment stem "The component in the front of the bike that attaches the handlebars to the bike.")	
+;;; (code stem "P19")
 
 (isa cog BikePart)	
-(comment cog 'A wheel or bar with a series of projections on its edge, which transfers motion by engaging with projections on another wheel or bar')	
-;;; (code cog 'P20')
+(comment cog "A wheel or bar with a series of projections on its edge, which transfers motion by engaging with projections on another wheel or bar")	
+;;; (code cog "P20")
 
 
 
 ;;; Conditions
 
 (isa squealing PartCondition)	
-(comment squealing 'Part makes a long, high-pitched cry or noise.')	
-;;; (code squealing 'C1')
+(comment squealing "Part makes a long, high-pitched cry or noise.")	
+;;; (code squealing "C1")
 
 (isa heated PartCondition)	
-(comment heated 'Hot part of the bike that cannot be touched.')	
-;;; (code heated 'C2')
+(comment heated "Hot part of the bike that cannot be touched.")	
+;;; (code heated "C2")
 
 (isa smooth PartCondition)	
-(comment smooth 'Part that has an even and regular surface and is free from perceptible projections.')	
-;;; (code smooth 'C3')
+(comment smooth "Part that has an even and regular surface and is free from perceptible projections.")	
+;;; (code smooth "C3")
 
 (isa dirty PartCondition)	
-(comment dirty 'Part is covered or marked with an unclean substance like sand or mud.')	
-;;; (code dirty 'C4')
+(comment dirty "Part is covered or marked with an unclean substance like sand or mud.")	
+;;; (code dirty "C4")
 
 (isa outdated PartCondition)	
-(comment outdated 'A part which is too old or that has been longer used than recommend.')	
-;;; (code outdated 'C5')
+(comment outdated "A part which is too old or that has been longer used than recommend.")	
+;;; (code outdated "C5")
 
 (isa hits PartCondition)	
-(comment hits 'Two parts of the bike or a part of the bike and a part of the human body which come into contact quickly and forcefully.')	
-;;; (code hits 'C6')
+(comment hits "Two parts of the bike or a part of the bike and a part of the human body which come into contact quickly and forcefully.")	
+;;; (code hits "C6")
 
 (isa cracked PartCondition)	
-(comment cracked 'Part which is damaged and which shows lines on the surface from having split without coming apart.')	
-;;; (code cracked 'C7')
+(comment cracked "Part which is damaged and which shows lines on the surface from having split without coming apart.")	
+;;; (code cracked "C7")
 
 (isa abnormalMovement PartCondition)	
-(comment abnormalMovement 'A part which moves in a way that deviates from what is normal or usual, typically in a way that is undesirable or worrying.')	
-;;; (code abnormalMovement 'C8')
+(comment abnormalMovement "A part which moves in a way that deviates from what is normal or usual, typically in a way that is undesirable or worrying.")	
+;;; (code abnormalMovement "C8")
 
 (isa misplaced PartCondition)	
-(comment misplaced 'The part is incorrectly positioned or has a wrong orientation.')	
-;;; (code misplaced 'C9')
+(comment misplaced "The part is incorrectly positioned or has a wrong orientation.")	
+;;; (code misplaced "C9")
 
 (isa vendor PartCondition)	
-(comment vendor 'Describes the vendor of a particular part of the bike since some parts might come from a bad vendor.')	
-;;; (code vendor 'C10')
+(comment vendor "Describes the vendor of a particular part of the bike since some parts might come from a bad vendor.")	
+;;; (code vendor "C10")
 
 (isa rubbing PartCondition)	
-(comment rubbing 'Part that creates a sound my touching another part while in motion.')	
-;;; (code rubbing 'C11')
+(comment rubbing "Part that creates a sound my touching another part while in motion.")	
+;;; (code rubbing "C11")
 
 (isa tooLoose PartCondition)	
-(comment tooLoose 'Parts are not firmly or tightly fixed in place, detached or able to be detached.')	
-;;; (code tooLoose 'C12')
+(comment tooLoose "Parts are not firmly or tightly fixed in place, detached or able to be detached.")	
+;;; (code tooLoose "C12")
 
 (isa tooTight PartCondition)	
-(comment tooTight 'Parts that are fixed, fastened, or closed firmly together which is hard to move, undo, or open.')	
-;;; (code tooTight 'C13')
+(comment tooTight "Parts that are fixed, fastened, or closed firmly together which is hard to move, undo, or open.")	
+;;; (code tooTight "C13")
 
 (isa wobbling PartCondition)	
-(comment wobbling 'Part which is moving unsteadily from side to side.')	
-;;; (code wobbling 'C14')
+(comment wobbling "Part which is moving unsteadily from side to side.")	
+;;; (code wobbling "C14")
 
 (isa tooClose PartCondition)	
-(comment tooClose 'Two Parts that are a short distance away or apart from each other in space.')	
-;;; (code tooClose 'C15')
+(comment tooClose "Two Parts that are a short distance away or apart from each other in space.")	
+;;; (code tooClose "C15")
 
 (isa farApart PartCondition)	
-(comment farApart 'Two parts that are separated by a distance in space that is too big in order to work properly.')	
-;;; (code farApart 'C16')
+(comment farApart "Two parts that are separated by a distance in space that is too big in order to work properly.")	
+;;; (code farApart "C16")
 
 (isa bent PartCondition)	
-(comment bent 'A part that is sharply curved or has an angle resulting in an abnormal form.')	
-;;; (code bent 'C17')
+(comment bent "A part that is sharply curved or has an angle resulting in an abnormal form.")	
+;;; (code bent "C17")
 
 (isa worn PartCondition)	
-(comment worn 'Part that is damaged, very tired and shabby as a result of much use.')	
-;;; (code worn 'C18')
+(comment worn "Part that is damaged, very tired and shabby as a result of much use.")	
+;;; (code worn "C18")
 
 (isa weak PartCondition)	
-(comment weak 'Part that is lacking the power to perform physically demanding tasks or lacks energy and accuracy.')	
-;;; (code weak 'C19')
+(comment weak "Part that is lacking the power to perform physically demanding tasks or lacks energy and accuracy.")	
+;;; (code weak "C19")
 
 (isa rusty PartCondition)	
-(comment rusty 'A metal part that is affected by rust.')	
-;;; (code rusty 'C20')
+(comment rusty "A metal part that is affected by rust.")	
+;;; (code rusty "C20")
 
 (isa skipping PartCondition)	
-(comment skipping 'The part looses contact to another part of the bike and skips that part.')	
-;;; (code skipping 'C21')
+(comment skipping "The part looses contact to another part of the bike and skips that part.")	
+;;; (code skipping "C21")
 
 (isa creaking PartCondition)	
-(comment creaking 'Part makes a creaking sound.')	
-;;; (code creaking 'C22')
+(comment creaking "Part makes a creaking sound.")	
+;;; (code creaking "C22")
 
 (isa stiff PartCondition)	
-(comment stiff 'Part that is not easily bent or changed in shape; rigid.')	
-;;; (code stiff 'C23')
+(comment stiff "Part that is not easily bent or changed in shape; rigid.")	
+;;; (code stiff "C23")
 
 (isa cantShift PartCondition)	
-(comment cantShift 'The cyclist cannot shift to a specific gear on the specified cog')	
-;;; (code cantShift 'C24')
+(comment cantShift "The cyclist cannot shift to a specific gear on the specified cog")	
+;;; (code cantShift "C24")
 
 (isa front PartCondition)	
-(comment front 'Indicates that the location of the part is in the front of the bike.')	
-;;; (code front 'C25')
+(comment front "Indicates that the location of the part is in the front of the bike.")	
+;;; (code front "C25")
 
 (isa rear PartCondition)	
-(comment rear 'Indicates that the location of the part is in the rear of the bike.')	
-;;; (code rear 'C26')
+(comment rear "Indicates that the location of the part is in the rear of the bike.")	
+;;; (code rear "C26")
 
 (isa small PartCondition)	
-(comment small 'Indicates that this is the smaller part of two related parts of the bike.')	
-;;; (code small 'C27')
+(comment small "Indicates that this is the smaller part of two related parts of the bike.")	
+;;; (code small "C27")
 
 (isa big PartCondition)	
-(comment big 'Indicates that this is the bigger part of two related parts of the bike.')	
-;;; (code big 'C28')
+(comment big "Indicates that this is the bigger part of two related parts of the bike.")	
+;;; (code big "C28")
 
 
 
 ;;; Resolutions
 
 (isa cleanPads ProblemResolution)	
-(comment cleanPads 'Clean pad with alcohol')	
-;;; (code cleanPads 'R1')
+(comment cleanPads "Clean pad with alcohol")	
+;;; (code cleanPads "R1")
 
 (isa buffPads ProblemResolution)	
-(comment buffPads 'Buff pad with steel wool')	
-;;; (code buffPads 'R2')
+(comment buffPads "Buff pad with steel wool")	
+;;; (code buffPads "R2")
 
 (isa toeInPads ProblemResolution)	
-(comment toeInPads 'Toe in the brake pads')	
-;;; (code toeInPads 'R3')
+(comment toeInPads "Toe in the brake pads")	
+;;; (code toeInPads "R3")
 
 (isa replacePads ProblemResolution)	
-(comment replacePads 'Replace with new pads')	
-;;; (code replacePads 'R4')
+(comment replacePads "Replace with new pads")	
+;;; (code replacePads "R4")
 
 (isa buffRotor ProblemResolution)	
-(comment buffRotor 'Buff rotor with steel wool')	
-;;; (code buffRotor 'R5')
+(comment buffRotor "Buff rotor with steel wool")	
+;;; (code buffRotor "R5")
 
 (isa stopDownhill ProblemResolution)	
-(comment stopDownhill 'Stop riding downhill')	
-;;; (code stopDownhill 'R6')
+(comment stopDownhill "Stop riding downhill")	
+;;; (code stopDownhill "R6")
 
 (isa biggerRotor ProblemResolution)	
-(comment biggerRotor 'Maybe install bigger rotor ')	
-;;; (code biggerRotor 'R7')
+(comment biggerRotor "Maybe install bigger rotor ")	
+;;; (code biggerRotor "R7")
 
 (isa reattachWheel ProblemResolution)	
-(comment reattachWheel 'Loosen and retighten wheel')	
-;;; (code reattachWheel 'R8')
+(comment reattachWheel "Loosen and retighten wheel")	
+;;; (code reattachWheel "R8")
 
 (isa adjustPadOrientation ProblemResolution)	
-(comment adjustPadOrientation 'Adjust brake pad orientation')	
-;;; (code adjustPadOrientation 'R9')
+(comment adjustPadOrientation "Adjust brake pad orientation")	
+;;; (code adjustPadOrientation "R9")
 
 (isa trueRim ProblemResolution)	
-(comment trueRim 'True the wheel rim')	
-;;; (code trueRim 'R10')
+(comment trueRim "True the wheel rim")	
+;;; (code trueRim "R10")
 
 (isa releaseCable ProblemResolution)	
-(comment releaseCable 'Let brake cable out')	
-;;; (code releaseCable 'R11')
+(comment releaseCable "Let brake cable out")	
+;;; (code releaseCable "R11")
 
 (isa adjustLever ProblemResolution)	
-(comment adjustLever 'Adjust lever to comfort')	
-;;; (code adjustLever 'R12')
+(comment adjustLever "Adjust lever to comfort")	
+;;; (code adjustLever "R12")
 
 (isa adjustBrakeScrew ProblemResolution)	
-(comment adjustBrakeScrew 'Adjust brake tension screw')	
-;;; (code adjustBrakeScrew 'R13')
+(comment adjustBrakeScrew "Adjust brake tension screw")	
+;;; (code adjustBrakeScrew "R13")
 
 (isa adjustPadPosition ProblemResolution)	
-(comment adjustPadPosition 'Adjust pad position within disc brake housing')	
-;;; (code adjustPadPosition 'R14')
+(comment adjustPadPosition "Adjust pad position within disc brake housing")	
+;;; (code adjustPadPosition "R14")
 
 (isa replaceRotor ProblemResolution)	
-(comment replaceRotor 'Replace Rotor')	
-;;; (code replaceRotor 'R15')
+(comment replaceRotor "Replace Rotor")	
+;;; (code replaceRotor "R15")
 
 (isa centerCalipers ProblemResolution)	
-(comment centerCalipers 'Center Calipers')	
-;;; (code centerCalipers 'R16')
+(comment centerCalipers "Center Calipers")	
+;;; (code centerCalipers "R16")
 
 (isa adjustBrakeCable ProblemResolution)	
-(comment adjustBrakeCable 'Adjust brake cable tension')	
-;;; (code adjustBrakeCable 'R17')
+(comment adjustBrakeCable "Adjust brake cable tension")	
+;;; (code adjustBrakeCable "R17")
 
 (isa cleanRim ProblemResolution)	
-(comment cleanRim 'Clean rim with alcohol')	
-;;; (code cleanRim 'R18')
+(comment cleanRim "Clean rim with alcohol")	
+;;; (code cleanRim "R18")
 
 (isa replaceCable ProblemResolution)	
-(comment replaceCable 'Replace brake cable')	
-;;; (code replaceCable 'R19')
+(comment replaceCable "Replace brake cable")	
+;;; (code replaceCable "R19")
 
 (isa replaceHousing ProblemResolution)	
-(comment replaceHousing 'Replace break housing')	
-;;; (code replaceHousing 'R20')
+(comment replaceHousing "Replace break housing")	
+;;; (code replaceHousing "R20")
 
 (isa turnBarrelAdjuster ProblemResolution)	
-(comment turnBarrelAdjuster 'Turn barrel adjuster or adjusting knob')	
-;;; (code turnBarrelAdjuster 'R21')
+(comment turnBarrelAdjuster "Turn barrel adjuster or adjusting knob")	
+;;; (code turnBarrelAdjuster "R21")
 
 (isa cleanRotor ProblemResolution)	
-(comment cleanRotor 'Clean rotor with alcohol')	
-;;; (code cleanRotor 'R22')
+(comment cleanRotor "Clean rotor with alcohol")	
+;;; (code cleanRotor "R22")
 
 (isa bleeding ProblemResolution)	
-(comment bleeding 'Maybe need bleeding to remove bubbles')	
-;;; (code bleeding 'R23')
+(comment bleeding "Maybe need bleeding to remove bubbles")	
+;;; (code bleeding "R23")
 
 (isa addLube ProblemResolution)	
-(comment addLube 'Add lube to chain.')	
-;;; (code addLube 'R24')
+(comment addLube "Add lube to chain.")	
+;;; (code addLube "R24")
 
 (isa tightenPedal ProblemResolution)	
-(comment tightenPedal 'Tighten the pedal bolt.')	
-;;; (code tightenPedal 'R25')
+(comment tightenPedal "Tighten the pedal bolt.")	
+;;; (code tightenPedal "R25")
 
 (isa tightenStem ProblemResolution)	
-(comment tightenStem 'Tighten stem bolts.')	
-;;; (code tightenStem 'R26')
+(comment tightenStem "Tighten stem bolts.")	
+;;; (code tightenStem "R26")
 
 (isa tightenAttachment ProblemResolution)	
-(comment tightenAttachment 'Tighten the bolts on the attachment of steerer to stem')	
-;;; (code tightenAttachment 'R27')
+(comment tightenAttachment "Tighten the bolts on the attachment of steerer to stem")	
+;;; (code tightenAttachment "R27")
 
 (isa tightenRearDerailleur ProblemResolution)
-(comment tightenRearDerailleur 'Tighten Rear Derailleur cable')	
-;;; (code tightenRearDerailleur 'R28')
+(comment tightenRearDerailleur "Tighten Rear Derailleur cable")	
+;;; (code tightenRearDerailleur "R28")
 
 (isa loosenRearDerailleur ProblemResolution)	
-(comment loosenRearDerailleur 'Loosen Rear Derailleur cable')	
-;;; (code loosenRearDerailleur 'R29')
+(comment loosenRearDerailleur "Loosen Rear Derailleur cable")	
+;;; (code loosenRearDerailleur "R29")
 
 (isa loosenFrontDerailleur ProblemResolution)	
-(comment loosenFrontDerailleur 'Loosen Front Derailleur cable')	
-;;; (code loosenFrontDerailleur 'R30')
+(comment loosenFrontDerailleur "Loosen Front Derailleur cable")	
+;;; (code loosenFrontDerailleur "R30")
 
 (isa tightenFrontDerailleur ProblemResolution)	
-(comment tightenFrontDerailleur 'Tighten Front Derailleur cable')	
-;;; (code tightenFrontDerailleur 'R31')
+(comment tightenFrontDerailleur "Tighten Front Derailleur cable")	
+;;; (code tightenFrontDerailleur "R31")
 
 
 
 ;;; BikeDefects
 
 (isa squealingDirtyRimBrakes BikeDefect)	
-;;; (code squealingDirtyRimBrakes 'E111')
+;;; (code squealingDirtyRimBrakes "E111")
 
 (isa sequealingMisplacedPads BikeDefect)	
-;;; (code sequealingMisplacedPads 'E112')
+;;; (code sequealingMisplacedPads "E112")
 
 (isa squealingOutdatedRimPads BikeDefect)	
-;;; (code squealingOutdatedRimPads 'E113')
+;;; (code squealingOutdatedRimPads "E113")
 
 (isa squealingDirtyDiscBrakes BikeDefect)	
-;;; (code squealingDirtyDiscBrakes 'E121')
+;;; (code squealingDirtyDiscBrakes "E121")
 
 (isa squealingHeatedBrakes BikeDefect)	
-;;; (code squealingHeatedBrakes 'E122')
+;;; (code squealingHeatedBrakes "E122")
 
 (isa squealingOutdatedDiscPads BikeDefect)	
-;;; (code squealingOutdatedDiscPads 'E123')
+;;; (code squealingOutdatedDiscPads "E123")
 	
 (isa rubbingMisassembledWheel BikeDefect)	
-;;; (code rubbingMisassembledWheel 'E201')
+;;; (code rubbingMisassembledWheel "E201")
 
 (isa rubbingMisassembledWheel BikeDefect)	
-;;; (code rubbingMisassembledWheel 'E201')
+;;; (code rubbingMisassembledWheel "E201")
 
 (isa rubbingMisplacedRimPads BikeDefect)	
-;;; (code rubbingMisplacedRimPads 'E211')
+;;; (code rubbingMisplacedRimPads "E211")
 
 (isa rubbingWobbelingRim BikeDefect)	
-;;; (code rubbingWobbelingRim 'E212')
+;;; (code rubbingWobbelingRim "E212")
 
 (isa rubbingWobbelingRim BikeDefect)	
-;;; (code rubbingWobbelingRim 'E212')
+;;; (code rubbingWobbelingRim "E212")
 
 (isa rubbingCloseRimPads BikeDefect)	
-;;; (code rubbingCloseRimPads 'E213')
+;;; (code rubbingCloseRimPads "E213")
 
 (isa rubbingFarRimPads BikeDefect)	
-;;; (code rubbingFarRimPads 'E214')
+;;; (code rubbingFarRimPads "E214")
 
 (isa rubbingMisplacedDiscPads BikeDefect)	
-;;; (code rubbingMisplacedDiscPads 'E221')
+;;; (code rubbingMisplacedDiscPads "E221")
 
 (isa rubbingBrokenRotor BikeDefect)	
-;;; (code rubbingBrokenRotor 'E222')
+;;; (code rubbingBrokenRotor "E222")
 
 (isa rubbingBrokenRotor BikeDefect)	
-;;; (code rubbingBrokenRotor 'E222')
+;;; (code rubbingBrokenRotor "E222")
 
 (isa rubbingMisspacedDiscPads BikeDefect)	
-;;; (code rubbingMisspacedDiscPads 'E223')
+;;; (code rubbingMisspacedDiscPads "E223")
 	
 (isa weakBrakeLever BikeDefect)	
-;;; (code weakBrakeLever 'E301')
+;;; (code weakBrakeLever "E301")
 
 (isa weakWornPads BikeDefect)	
-;;; (code weakWornPads 'E302')
+;;; (code weakWornPads "E302")
 
 (isa weakFarRimPads BikeDefect)	
-;;; (code weakFarRimPads 'E311')
+;;; (code weakFarRimPads "E311")
 
 (isa weakMisplacedPads BikeDefect)	
-;;; (code weakMisplacedPads 'E312')
+;;; (code weakMisplacedPads "E312")
 
 (isa weakDirtyRimBrakes BikeDefect)	
-;;; (code weakDirtyRimBrakes 'E313')
+;;; (code weakDirtyRimBrakes "E313")
 
 (isa weakFarDiscPads BikeDefect)	
-;;; (code weakFarDiscPads 'E321')
+;;; (code weakFarDiscPads "E321")
 
 (isa weakBrakeCable BikeDefect)	
-;;; (code weakBrakeCable 'E322')
+;;; (code weakBrakeCable "E322")
 
 (isa weakBrakeHousing BikeDefect)	
-;;; (code weakBrakeHousing 'E323')
+;;; (code weakBrakeHousing "E323")
 
 (isa weakDirtyDiscBrakes BikeDefect)	
-;;; (code weakDirtyDiscBrakes 'E324')
+;;; (code weakDirtyDiscBrakes "E324")
 	
 (isa squealingChain BikeDefect)	
-;;; (code squealingChain 'E401')
+;;; (code squealingChain "E401")
 	
 (isa skippingRustyChain BikeDefect)	
-;;; (code skippingRustyChain 'E501')
+;;; (code skippingRustyChain "E501")
 
 (isa skippingStiffChain BikeDefect)	
-;;; (code skippingStiffChain 'E502')
+;;; (code skippingStiffChain "E502")
 	
 (isa creakingPedals BikeDefect)	
-;;; (code creakingPedals 'E601')
+;;; (code creakingPedals "E601")
 	
 (isa creakingHandlebarLooseStem BikeDefect)	
-;;; (code creakingHandlebarLooseStem 'E701')
+;;; (code creakingHandlebarLooseStem "E701")
 
 (isa creakingHandlebarLooseAttachement BikeDefect)	
-;;; (code creakingHandlebarLooseAttachement 'E702')
+;;; (code creakingHandlebarLooseAttachement "E702")
 	
 (isa creakingWobbleWheel BikeDefect)	
-;;; (code creakingWobbleWheel 'E801')
+;;; (code creakingWobbleWheel "E801")
 	
 (isa shiftUpRearProblem BikeDefect)	
-;;; (code shiftUpRearProblem 'E901')
+;;; (code shiftUpRearProblem "E901")
 
 (isa shiftDownRearProblem BikeDefect)	
-;;; (code shiftDownRearProblem 'E902')
+;;; (code shiftDownRearProblem "E902")
 
 (isa shiftUpFrontProblem BikeDefect)	
-;;; (code shiftUpFrontProblem 'E903')
+;;; (code shiftUpFrontProblem "E903")
 
 (isa shiftDownFrontProblem BikeDefect)	
-;;; (code shiftDownFrontProblem 'E904')
+;;; (code shiftDownFrontProblem "E904")
 
 
 
