@@ -17,11 +17,11 @@
 (comment ProblemResolution "The collection of all bike problem resolutions.")
 
 (isa ProblemSymptom FirstOrderCollection)
-(genls PartCondition DescriptionTypeByFocus)
+(genls ProblemSymptom DescriptionTypeByFocus)
 (comment ProblemSymptom "The collection of possible combinations of bike parts and conditions that cause a defect or problem.")
 
 (isa BikeDefect FirstOrderCollection)
-(genls PartCondition DescriptionTypeByFocus)
+(genls BikeDefect DescriptionTypeByFocus)
 (comment BikeDefect "The collection of errors or defects that can appear on a bike.")
 
 
