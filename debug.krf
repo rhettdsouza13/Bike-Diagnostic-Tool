@@ -618,10 +618,10 @@
 
 ;;; Queries
 
-(solvesProblem ?error ?resolution)
+;;; (solvesProblem ?error ?resolution)
 
-(causesProblem ?symptoms ?error)
+;;; (causesProblem ?symptoms ?error)
 
-(mightSolveProblem (TheSet (SymptomFn dirty rim)) ?requiredForResolution ?resolutions)
+;;; (mightSolveProblem (TheSet (SymptomFn dirty rim)) ?requiredForResolution ?resolutions)
 
-(mightCauseProblem (TheSet (SymptomFn dirty rim)) ?requiredForError ?error)
+;;; (mightCauseProblem (TheSet (SymptomFn dirty rim)) ?requiredForError ?error)
