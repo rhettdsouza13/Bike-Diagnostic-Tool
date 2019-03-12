@@ -1,9 +1,6 @@
-(in-microtheory KRR-Winter2019FactsMt)
-
-
+(in-microtheory KRR-BikeDiagnosisMt)
 
 ;;; Collections
-
 (isa BikePart FirstOrderCollection)
 (genls BikePart Device)
 (comment BikePart "The collection of all bike parts.")
@@ -24,454 +21,438 @@
 (genls BikeDefect DescriptionTypeByFocus)
 (comment BikeDefect "The collection of errors or defects that can appear on a bike.")
 
-
-
-;;; Facts
-
 ;;; Parts
 (isa rim BikePart)	
 (comment rim "The rim is the outer edge of a wheel, on which the tire is fitted. Usually a rim is made out of metal. Furthermore, the spokes are mounted at the rim and keep the rim in shape if a heavy object sits on the bike.")	
-;;; (code rim "P1")
+(code rim "P1")
 
 (isa pads BikePart)	
 (comment pads "Pads are small objects which have a rough surface and are part of the braking system of the bike. The pads can be pushed onto the rim or the rotor of a disc braked bike in order to create friction to slow down the bike.")
-;;; (code pads "P2")
+(code pads "P2")
 
 (isa rotor BikePart)	
 (comment rotor "A rotor is mounted and the center of a wheel and is the counter part for the pads of a disc braked bike. The rotor has a rough surface is made out of metal and only has a braking purpose.")	
-;;; (code rotor "P3")
+(code rotor "P3")
 
 (isa wheel BikePart)	
 (comment wheel "A circular object that revolves on an axle and is fixed below a bike or to enable it to move easily over the ground.")	
-;;; (code wheel "P4")
+(code wheel "P4")
 
 (isa dropouts BikePart)	
 (comment dropouts "A U-shaped slot at the end of a fork on a bicycle, made to receive the axle and enabling the wheel to be changed rapidly.")	
-;;; (code dropouts "P5")
+(code dropouts "P5")
 
 (isa nipple BikePart)	
 (comment nipple "The little thingies that the spokes screw into at the rim and put the spoke on tension so that the rim does not collapse.")	
-;;; (code nipple "P6")
+(code nipple "P6")
 
 (isa spoke BikePart)	
 (comment spoke "One of the bars or wire rods connecting the center of a wheel to its outer edge, so that the wheel does not collapse while a force is pushing onto it. The spokes spread the force equally to all sides of the wheel.")	
-;;; (code spoke "P7")
+(code spoke "P7")
 
 (isa lever BikePart)	
 (comment lever "A projecting arm or handle that is moved to operate a mechanism. Usually a bike uses levers to activate the braking mechanism of the bike.")	
-;;; (code lever "P8")
+(code lever "P8")
 
 (isa brakeCable BikePart)	
 (comment brakeCable "A thin metal cable that connects the lever with the braking system of the bike. The cable "transports" the force which has been injected by the human to the brakes or the shifting mechanism of the bike.")	
-;;; (code brakeCable "P9")
+(code brakeCable "P9")
 
 (isa brakeTensionScrew BikePart)	
 (comment brakeTensionScrew "The brake tension screw is mounted near the lever. By turning the screw you can increase/decrease the length of the brake cable. As a result, the lever can be pulled further or less further to the handlebar.")
-;;; (code brakeTensionScrew "P10")
+(code brakeTensionScrew "P10")
 
 (isa brakeHousing BikePart)	
 (comment brakeHousing "The brake housing is a part of a disc braked bike that contains the pads for braking the bike. The rotor of the bike goes through the brake housing and rotates if the bike is in motion.")	
-;;; (code brakeHousing "P11")
+(code brakeHousing "P11")
 
 (isa calipers BikePart)	
 (comment calipers "The brake caliper holds the braking pads. The rim or the rotor of the bike run through the caliper. If the operator pulls the brake lever on the bike the caliper pushes the pads onto the rim or the rotor in order tto stop the bike.")	
-;;; (code calipers "P12")
+(code calipers "P12")
 
 (isa cableHousing BikePart)	
 (comment cableHousing "The braking cables and the shifting cables usually run inside a small housing that protects the cables from the external environment.")	
-;;; (code cableHousing "P13")
+(code cableHousing "P13")
 
 (isa adjustingKnob BikePart)	
 (comment adjustingKnob "Knob that is at the side of the disc brake housing which can be turned in order to move the braking pads closer to the rotor or further away from the rotor.")	
-;;; (code adjustingKnob "P14")
+(code adjustingKnob "P14")
 
 (isa brakes BikePart)	
 (comment brakes "The system of the bike that cause the bike to slow down.")	
-;;; (code brakes "P15")
+(code brakes "P15")
 
 (isa handlebar BikePart)	
 (comment handlebar "The steering bar of a bicycle, motorcycle, scooter, or other vehicle, with a handgrip at each end.")	
-;;; (code handlebar "P16")
+(code handlebar "P16")
 
 (isa chain BikePart)	
 (comment chain "The chain is the part of the bike that transfers the energy from the pedals into the cogs of the rear wheel.")	
-;;; (code chain "P17")
+(code chain "P17")
 
 (isa pedals BikePart)	
 (comment pedals "The surface that the cyclist puts their feet on to exert force")	
-;;; (code pedals "P18")
+(code pedals "P18")
 
 (isa stem BikePart)	
 (comment stem "The component in the front of the bike that attaches the handlebars to the bike.")	
-;;; (code stem "P19")
+(code stem "P19")
 
 (isa cog BikePart)	
 (comment cog "A wheel or bar with a series of projections on its edge, which transfers motion by engaging with projections on another wheel or bar")	
-;;; (code cog "P20")
-
-
+(code cog "P20")
 
 ;;; Conditions
-
 (isa squealing PartCondition)	
 (comment squealing "Part makes a long, high-pitched cry or noise.")	
-;;; (code squealing "C1")
+(code squealing "C1")
 
 (isa heated PartCondition)	
 (comment heated "Hot part of the bike that cannot be touched.")	
-;;; (code heated "C2")
+(code heated "C2")
 
 (isa smooth PartCondition)	
 (comment smooth "Part that has an even and regular surface and is free from perceptible projections.")	
-;;; (code smooth "C3")
+(code smooth "C3")
 
 (isa dirty PartCondition)	
 (comment dirty "Part is covered or marked with an unclean substance like sand or mud.")	
-;;; (code dirty "C4")
+(code dirty "C4")
 
 (isa outdated PartCondition)	
 (comment outdated "A part which is too old or that has been longer used than recommend.")	
-;;; (code outdated "C5")
+(code outdated "C5")
 
 (isa hits PartCondition)	
 (comment hits "Two parts of the bike or a part of the bike and a part of the human body which come into contact quickly and forcefully.")	
-;;; (code hits "C6")
+(code hits "C6")
 
 (isa cracked PartCondition)	
 (comment cracked "Part which is damaged and which shows lines on the surface from having split without coming apart.")	
-;;; (code cracked "C7")
+(code cracked "C7")
 
 (isa abnormalMovement PartCondition)	
 (comment abnormalMovement "A part which moves in a way that deviates from what is normal or usual, typically in a way that is undesirable or worrying.")	
-;;; (code abnormalMovement "C8")
+(code abnormalMovement "C8")
 
 (isa misplaced PartCondition)	
 (comment misplaced "The part is incorrectly positioned or has a wrong orientation.")	
-;;; (code misplaced "C9")
+(code misplaced "C9")
 
 (isa vendor PartCondition)	
 (comment vendor "Describes the vendor of a particular part of the bike since some parts might come from a bad vendor.")	
-;;; (code vendor "C10")
+(code vendor "C10")
 
 (isa rubbing PartCondition)	
 (comment rubbing "Part that creates a sound my touching another part while in motion.")	
-;;; (code rubbing "C11")
+(code rubbing "C11")
 
 (isa tooLoose PartCondition)	
 (comment tooLoose "Parts are not firmly or tightly fixed in place, detached or able to be detached.")	
-;;; (code tooLoose "C12")
+(code tooLoose "C12")
 
 (isa tooTight PartCondition)	
 (comment tooTight "Parts that are fixed, fastened, or closed firmly together which is hard to move, undo, or open.")	
-;;; (code tooTight "C13")
+(code tooTight "C13")
 
 (isa wobbling PartCondition)	
 (comment wobbling "Part which is moving unsteadily from side to side.")	
-;;; (code wobbling "C14")
+(code wobbling "C14")
 
 (isa tooClose PartCondition)	
 (comment tooClose "Two Parts that are a short distance away or apart from each other in space.")	
-;;; (code tooClose "C15")
+(code tooClose "C15")
 
 (isa farApart PartCondition)	
 (comment farApart "Two parts that are separated by a distance in space that is too big in order to work properly.")	
-;;; (code farApart "C16")
+(code farApart "C16")
 
 (isa bent PartCondition)	
 (comment bent "A part that is sharply curved or has an angle resulting in an abnormal form.")	
-;;; (code bent "C17")
+(code bent "C17")
 
 (isa worn PartCondition)	
 (comment worn "Part that is damaged, very tired and shabby as a result of much use.")	
-;;; (code worn "C18")
+(code worn "C18")
 
 (isa weak PartCondition)	
 (comment weak "Part that is lacking the power to perform physically demanding tasks or lacks energy and accuracy.")	
-;;; (code weak "C19")
+(code weak "C19")
 
 (isa rusty PartCondition)	
 (comment rusty "A metal part that is affected by rust.")	
-;;; (code rusty "C20")
+(code rusty "C20")
 
 (isa skipping PartCondition)	
 (comment skipping "The part looses contact to another part of the bike and skips that part.")	
-;;; (code skipping "C21")
+(code skipping "C21")
 
 (isa creaking PartCondition)	
 (comment creaking "Part makes a creaking sound.")	
-;;; (code creaking "C22")
+(code creaking "C22")
 
 (isa stiff PartCondition)	
 (comment stiff "Part that is not easily bent or changed in shape; rigid.")	
-;;; (code stiff "C23")
+(code stiff "C23")
 
 (isa cantShift PartCondition)	
 (comment cantShift "The cyclist cannot shift to a specific gear on the specified cog")	
-;;; (code cantShift "C24")
+(code cantShift "C24")
 
 (isa front PartCondition)	
 (comment front "Indicates that the location of the part is in the front of the bike.")	
-;;; (code front "C25")
+(code front "C25")
 
 (isa rear PartCondition)	
 (comment rear "Indicates that the location of the part is in the rear of the bike.")	
-;;; (code rear "C26")
+(code rear "C26")
 
 (isa small PartCondition)	
 (comment small "Indicates that this is the smaller part of two related parts of the bike.")	
-;;; (code small "C27")
+(code small "C27")
 
 (isa big PartCondition)	
 (comment big "Indicates that this is the bigger part of two related parts of the bike.")	
-;;; (code big "C28")
-
-
+(code big "C28")
 
 ;;; Resolutions
-
 (isa cleanPads ProblemResolution)	
 (comment cleanPads "Clean pad with alcohol")	
-;;; (code cleanPads "R1")
+(code cleanPads "R1")
 
 (isa buffPads ProblemResolution)	
 (comment buffPads "Buff pad with steel wool")	
-;;; (code buffPads "R2")
+(code buffPads "R2")
 
 (isa toeInPads ProblemResolution)	
 (comment toeInPads "Toe in the brake pads")	
-;;; (code toeInPads "R3")
+(code toeInPads "R3")
 
 (isa replacePads ProblemResolution)	
 (comment replacePads "Replace with new pads")	
-;;; (code replacePads "R4")
+(code replacePads "R4")
 
 (isa buffRotor ProblemResolution)	
 (comment buffRotor "Buff rotor with steel wool")	
-;;; (code buffRotor "R5")
+(code buffRotor "R5")
 
 (isa stopDownhill ProblemResolution)	
 (comment stopDownhill "Stop riding downhill")	
-;;; (code stopDownhill "R6")
+(code stopDownhill "R6")
 
 (isa biggerRotor ProblemResolution)	
 (comment biggerRotor "Maybe install bigger rotor ")	
-;;; (code biggerRotor "R7")
+(code biggerRotor "R7")
 
 (isa reattachWheel ProblemResolution)	
 (comment reattachWheel "Loosen and retighten wheel")	
-;;; (code reattachWheel "R8")
+(code reattachWheel "R8")
 
 (isa adjustPadOrientation ProblemResolution)	
 (comment adjustPadOrientation "Adjust brake pad orientation")	
-;;; (code adjustPadOrientation "R9")
+(code adjustPadOrientation "R9")
 
 (isa trueRim ProblemResolution)	
 (comment trueRim "True the wheel rim")	
-;;; (code trueRim "R10")
+(code trueRim "R10")
 
 (isa releaseCable ProblemResolution)	
 (comment releaseCable "Let brake cable out")	
-;;; (code releaseCable "R11")
+(code releaseCable "R11")
 
 (isa adjustLever ProblemResolution)	
 (comment adjustLever "Adjust lever to comfort")	
-;;; (code adjustLever "R12")
+(code adjustLever "R12")
 
 (isa adjustBrakeScrew ProblemResolution)	
 (comment adjustBrakeScrew "Adjust brake tension screw")	
-;;; (code adjustBrakeScrew "R13")
+(code adjustBrakeScrew "R13")
 
 (isa adjustPadPosition ProblemResolution)	
 (comment adjustPadPosition "Adjust pad position within disc brake housing")	
-;;; (code adjustPadPosition "R14")
+(code adjustPadPosition "R14")
 
 (isa replaceRotor ProblemResolution)	
 (comment replaceRotor "Replace Rotor")	
-;;; (code replaceRotor "R15")
+(code replaceRotor "R15")
 
 (isa centerCalipers ProblemResolution)	
 (comment centerCalipers "Center Calipers")	
-;;; (code centerCalipers "R16")
+(code centerCalipers "R16")
 
 (isa adjustBrakeCable ProblemResolution)	
 (comment adjustBrakeCable "Adjust brake cable tension")	
-;;; (code adjustBrakeCable "R17")
+(code adjustBrakeCable "R17")
 
 (isa cleanRim ProblemResolution)	
 (comment cleanRim "Clean rim with alcohol")	
-;;; (code cleanRim "R18")
+(code cleanRim "R18")
 
 (isa replaceCable ProblemResolution)	
 (comment replaceCable "Replace brake cable")	
-;;; (code replaceCable "R19")
+(code replaceCable "R19")
 
 (isa replaceHousing ProblemResolution)	
 (comment replaceHousing "Replace break housing")	
-;;; (code replaceHousing "R20")
+(code replaceHousing "R20")
 
 (isa turnBarrelAdjuster ProblemResolution)	
 (comment turnBarrelAdjuster "Turn barrel adjuster or adjusting knob")	
-;;; (code turnBarrelAdjuster "R21")
+(code turnBarrelAdjuster "R21")
 
 (isa cleanRotor ProblemResolution)	
 (comment cleanRotor "Clean rotor with alcohol")	
-;;; (code cleanRotor "R22")
+(code cleanRotor "R22")
 
 (isa bleeding ProblemResolution)	
 (comment bleeding "Maybe need bleeding to remove bubbles")	
-;;; (code bleeding "R23")
+(code bleeding "R23")
 
 (isa addLube ProblemResolution)	
 (comment addLube "Add lube to chain.")	
-;;; (code addLube "R24")
+(code addLube "R24")
 
 (isa tightenPedal ProblemResolution)	
 (comment tightenPedal "Tighten the pedal bolt.")	
-;;; (code tightenPedal "R25")
+(code tightenPedal "R25")
 
 (isa tightenStem ProblemResolution)	
 (comment tightenStem "Tighten stem bolts.")	
-;;; (code tightenStem "R26")
+(code tightenStem "R26")
 
 (isa tightenAttachment ProblemResolution)	
 (comment tightenAttachment "Tighten the bolts on the attachment of steerer to stem")	
-;;; (code tightenAttachment "R27")
+(code tightenAttachment "R27")
 
 (isa tightenRearDerailleur ProblemResolution)
 (comment tightenRearDerailleur "Tighten Rear Derailleur cable")	
-;;; (code tightenRearDerailleur "R28")
+(code tightenRearDerailleur "R28")
 
 (isa loosenRearDerailleur ProblemResolution)	
 (comment loosenRearDerailleur "Loosen Rear Derailleur cable")	
-;;; (code loosenRearDerailleur "R29")
+(code loosenRearDerailleur "R29")
 
 (isa loosenFrontDerailleur ProblemResolution)	
 (comment loosenFrontDerailleur "Loosen Front Derailleur cable")	
-;;; (code loosenFrontDerailleur "R30")
+(code loosenFrontDerailleur "R30")
 
 (isa tightenFrontDerailleur ProblemResolution)	
 (comment tightenFrontDerailleur "Tighten Front Derailleur cable")	
-;;; (code tightenFrontDerailleur "R31")
-
-
+(code tightenFrontDerailleur "R31")
 
 ;;; BikeDefects
-
 (isa squealingDirtyRimBrakes BikeDefect)	
-;;; (code squealingDirtyRimBrakes "E111")
+(code squealingDirtyRimBrakes "E111")
 
-(isa sequealingMisplacedPads BikeDefect)	
-;;; (code sequealingMisplacedPads "E112")
+(isa squealingMisplacedPads BikeDefect)	
+(code squealingMisplacedPads "E112")
 
 (isa squealingOutdatedRimPads BikeDefect)	
-;;; (code squealingOutdatedRimPads "E113")
+(code squealingOutdatedRimPads "E113")
 
 (isa squealingDirtyDiscBrakes BikeDefect)	
-;;; (code squealingDirtyDiscBrakes "E121")
+(code squealingDirtyDiscBrakes "E121")
 
 (isa squealingHeatedBrakes BikeDefect)	
-;;; (code squealingHeatedBrakes "E122")
+(code squealingHeatedBrakes "E122")
 
 (isa squealingOutdatedDiscPads BikeDefect)	
-;;; (code squealingOutdatedDiscPads "E123")
+(code squealingOutdatedDiscPads "E123")
 	
 (isa rubbingMisassembledWheel BikeDefect)	
-;;; (code rubbingMisassembledWheel "E201")
+(code rubbingMisassembledWheel "E201")
 
 (isa rubbingMisassembledWheel BikeDefect)	
-;;; (code rubbingMisassembledWheel "E201")
+(code rubbingMisassembledWheel "E201")
 
 (isa rubbingMisplacedRimPads BikeDefect)	
-;;; (code rubbingMisplacedRimPads "E211")
+(code rubbingMisplacedRimPads "E211")
 
-(isa rubbingWobbelingRim BikeDefect)	
-;;; (code rubbingWobbelingRim "E212")
+(isa rubbingWobblingRim BikeDefect)	
+(code rubbingWobblingRim "E212")
 
-(isa rubbingWobbelingRim BikeDefect)	
-;;; (code rubbingWobbelingRim "E212")
+(isa rubbingWobblingRim BikeDefect)	
+(code rubbingWobblingRim "E212")
 
 (isa rubbingCloseRimPads BikeDefect)	
-;;; (code rubbingCloseRimPads "E213")
+(code rubbingCloseRimPads "E213")
 
 (isa rubbingFarRimPads BikeDefect)	
-;;; (code rubbingFarRimPads "E214")
+(code rubbingFarRimPads "E214")
 
 (isa rubbingMisplacedDiscPads BikeDefect)	
-;;; (code rubbingMisplacedDiscPads "E221")
+(code rubbingMisplacedDiscPads "E221")
 
 (isa rubbingBrokenRotor BikeDefect)	
-;;; (code rubbingBrokenRotor "E222")
+(code rubbingBrokenRotor "E222")
 
 (isa rubbingBrokenRotor BikeDefect)	
-;;; (code rubbingBrokenRotor "E222")
+(code rubbingBrokenRotor "E222")
 
 (isa rubbingMisspacedDiscPads BikeDefect)	
-;;; (code rubbingMisspacedDiscPads "E223")
+(code rubbingMisspacedDiscPads "E223")
 	
 (isa weakBrakeLever BikeDefect)	
-;;; (code weakBrakeLever "E301")
+(code weakBrakeLever "E301")
 
 (isa weakWornPads BikeDefect)	
-;;; (code weakWornPads "E302")
+(code weakWornPads "E302")
 
 (isa weakFarRimPads BikeDefect)	
-;;; (code weakFarRimPads "E311")
+(code weakFarRimPads "E311")
 
 (isa weakMisplacedPads BikeDefect)	
-;;; (code weakMisplacedPads "E312")
+(code weakMisplacedPads "E312")
 
 (isa weakDirtyRimBrakes BikeDefect)	
-;;; (code weakDirtyRimBrakes "E313")
+(code weakDirtyRimBrakes "E313")
 
 (isa weakFarDiscPads BikeDefect)	
-;;; (code weakFarDiscPads "E321")
+(code weakFarDiscPads "E321")
 
 (isa weakBrakeCable BikeDefect)	
-;;; (code weakBrakeCable "E322")
+(code weakBrakeCable "E322")
 
 (isa weakBrakeHousing BikeDefect)	
-;;; (code weakBrakeHousing "E323")
+(code weakBrakeHousing "E323")
 
 (isa weakDirtyDiscBrakes BikeDefect)	
-;;; (code weakDirtyDiscBrakes "E324")
+(code weakDirtyDiscBrakes "E324")
 	
 (isa squealingChain BikeDefect)	
-;;; (code squealingChain "E401")
+(code squealingChain "E401")
 	
 (isa skippingRustyChain BikeDefect)	
-;;; (code skippingRustyChain "E501")
+(code skippingRustyChain "E501")
 
 (isa skippingStiffChain BikeDefect)	
-;;; (code skippingStiffChain "E502")
+(code skippingStiffChain "E502")
 	
 (isa creakingPedals BikeDefect)	
-;;; (code creakingPedals "E601")
+(code creakingPedals "E601")
 	
 (isa creakingHandlebarLooseStem BikeDefect)	
-;;; (code creakingHandlebarLooseStem "E701")
+(code creakingHandlebarLooseStem "E701")
 
 (isa creakingHandlebarLooseAttachement BikeDefect)	
-;;; (code creakingHandlebarLooseAttachement "E702")
+(code creakingHandlebarLooseAttachement "E702")
 	
 (isa creakingWobbleWheel BikeDefect)	
-;;; (code creakingWobbleWheel "E801")
+(code creakingWobbleWheel "E801")
 	
 (isa shiftUpRearProblem BikeDefect)	
-;;; (code shiftUpRearProblem "E901")
+(code shiftUpRearProblem "E901")
 
 (isa shiftDownRearProblem BikeDefect)	
-;;; (code shiftDownRearProblem "E902")
+(code shiftDownRearProblem "E902")
 
 (isa shiftUpFrontProblem BikeDefect)	
-;;; (code shiftUpFrontProblem "E903")
+(code shiftUpFrontProblem "E903")
 
 (isa shiftDownFrontProblem BikeDefect)	
-;;; (code shiftDownFrontProblem "E904")
-
-
+(code shiftDownFrontProblem "E904")
 
 ;;; Predicates / Functions
-
 ;;; This function should allow us to enter multiple symptoms
 (isa SymptomFn BinaryFunction)
 (arity SymptomFn 2)
@@ -495,85 +476,50 @@
 (comment causesProblem "A relation indicating that the problem is caused by the listed symptoms.")
 
 ;;; Predicate indicates what the shortcut for this fact is
-;;; (isa code DirectBinaryPredicate)
-;;; (arity code 2)
-;;; (arg1Isa code Thing)
-;;; (arg2Isa code CharacterString)
-;;; (comment code "Indicates what the shortcut or code for this fact is.")
+(isa code DirectBinaryPredicate)
+(arity code 2)
+(arg1Isa code Thing)
+(arg2Isa code CharacterString)
+(comment code "Indicates what the shortcut or code for this fact is.")
 
+;;; Predicate that might be caused by a given set of symptoms
+;;; The first set indicates the current symptoms the user found
+;;; The second set are the symptoms that are required for the error
+(isa mightCauseProblem TernaryPredicate)
+(arity mightCauseProblem 3)
+(arg1Isa mightCauseProblem Set)
+(arg2Isa mightCauseProblem Set)
+(arg3Isa mightCauseProblem BikeDefect)
+(comment mightCauseProblem "Returns an error that is caused by a particular set of problems")
 
-
-;;; Causes
-
-(causesProblem (TheSet (SymptomFn squealing brakes) (SymptomFn dirty rim) (SymptomFn smooth rim) (SymptomFn dirty pads) (SymptomFn smooth pads)) squealingDirtyRimBrakes)
-(causesProblem (TheSet (SymptomFn squealing brakes) (SymptomFn misplaced pads) sequealingMisplacedPads)
-(causesProblem (TheSet (SymptomFn squealing brakes) (SymptomFn outdated pads)) squealingOutdatedRimPads)
-(causesProblem (TheSet (SymptomFn squealing brakes) (SymptomFn smooth pads) (SymptomFn dirty pads) (SymptomFn smooth rotor) (SymptomFn dirty rotor)) squealingDirtyDiscBrakes)
-(causesProblem (TheSet (SymptomFn squealing brakes) (SymptomFn heated rotor)) squealingHeatedBrakes)
-(causesProblem (TheSet (SymptomFn squealing brakes) (SymptomFn vendor pads)) squealingOutdatedDiscPads)
-
-(causesProblem (TheSet (SymptomFn rubbing brakes) (SymptomFn tooTight dropouts) (SymptomFn tooTight wheel)) rubbingMisassembledWheel)
-(causesProblem (TheSet (SymptomFn rubbing brakes) (SymptomFn tooLoose dropouts) (SymptomFn tooLoose wheel)) rubbingMisassembledWheel)
-(causesProblem (TheSet (SymptomFn rubbing brakes) (SymptomFn misplaced pads)) rubbingMisplacedRimPads)
-(causesProblem (TheSet (SymptomFn rubbing brakes) (SymptomFn wobbling wheel)) rubbingWobbelingRim)
-(causesProblem (TheSet (SymptomFn rubbing brakes) (SymptomFn wobbling rim)) rubbingWobbelingRim)
-(causesProblem (TheSet (SymptomFn rubbing brakes) (SymptomFn tooClose rim) (SymptomFn tooClose pads)) rubbingCloseRimPads)
-(causesProblem (TheSet (SymptomFn rubbing brakes) (SymptomFn farApart rim) (SymptomFn farApart pads)) rubbingFarRimPads)
-(causesProblem (TheSet (SymptomFn rubbing brakes) (SymptomFn misplaced pads) (SymptomFn misplaced rotor)) rubbingMisplacedDiscPads)
-(causesProblem (TheSet (SymptomFn rubbing brakes) (SymptomFn worn rotor)) rubbingBrokenRotor)
-(causesProblem (TheSet (SymptomFn rubbing brakes) (SymptomFn bent rotor)) rubbingBrokenRotor)
-(causesProblem (TheSet (SymptomFn rubbing brakes) (SymptomFn tooClose pads) (SymptomFn tooClose rotor)) rubbingMisspacedDiscPads)
-
-(causesProblem (TheSet (SymptomFn weak brakes) (SymptomFn hits lever) (SymptomFn hits handlebar)) weakBrakeLever)
-(causesProblem (TheSet (SymptomFn weak brakes) (SymptomFn worn pads)) weakWornPads)
-(causesProblem (TheSet (SymptomFn weak brakes) (SymptomFn farApart rim) (SymptomFn farApart pads)) weakFarRimPads)
-(causesProblem (TheSet (SymptomFn weak brakes) (SymptomFn misplaced pads)) weakMisplacedPads)
-(causesProblem (TheSet (SymptomFn weak brakes) (SymptomFn dirty rim) (SymptomFn dirty pads)) weakDirtyRimBrakes)
-(causesProblem (TheSet (SymptomFn weak brakes) (SymptomFn farApart pads) (SymptomFn farApart rotor)) weakFarDiscPads)
-(causesProblem (TheSet (SymptomFn weak brakes) (SymptomFn abnormalMovement cableHousing)) weakBrakeCable)
-(causesProblem (TheSet (SymptomFn weak brakes) (SymptomFn cracked brakeHousing)) weakBrakeHousing)
-(causesProblem (TheSet (SymptomFn weak brakes) (SymptomFn dirty pads) (SymptomFn dirty rotor)) weakDirtyDiscBrakes)
-
-(causesProblem (TheSet (SymptomFn squealing chain) (SymptomFn rusty chain)) squealingChain)
-
-(causesProblem (TheSet (SymptomFn skipping chain) (SymptomFn rusty chain)) skippingRustyChain)
-(causesProblem (TheSet (SymptomFn skipping chain) (SymptomFn stiff chain)) skippingStiffChain)
-
-(causesProblem (TheSet (SymptomFn creaking pedals) (SymptomFn tooClose pedals)) creakingPedals)
-
-(causesProblem (TheSet (SymptomFn creaking handlebar) (SymptomFn tooClose stem)) creakingHandlebarLooseStem)
-(causesProblem (TheSet (SymptomFn creaking handlebar) (SymptomFn wobbling wheel)) creakingHandlebarLooseAttachement)
-
-(causesProblem (TheSet (SymptomFn creaking wheel) (SymptomFn wobbling wheel)) creakingWobbleWheel)
-
-(causesProblem (TheSet (SymptomFn cantShift cog) (SymptomFn rear cog) (SymptomFn big cog)) shiftUpRearProblem)
-(causesProblem (TheSet (SymptomFn cantShift cog) (SymptomFn rear cog) (SymptomFn small cog)) shiftDownRearProblem)
-(causesProblem (TheSet (SymptomFn cantShift cog) (SymptomFn front cog) (SymptomFn big cog)) shiftUpFrontProblem)
-(causesProblem (TheSet (SymptomFn cantShift cog) (SymptomFn front cog) (SymptomFn small cog)) shiftDownFrontProblem)
-
-
+;;; Predicate that tells the user if he is going to be able to apply that solution to the given symptoms
+;;; The first set indicates the current symptoms the user found
+;;; The second set are the symptoms that are required to apply the resolution
+(isa mightSolveProblem TernaryPredicate)
+(arity mightSolveProblem 3)
+(arg1Isa mightSolveProblem Set)
+(arg2Isa mightSolveProblem Set)
+(arg3Isa mightSolveProblem ProblemResolution)
+(comment mightSolveProblem "Returns resolution that solves a particular set of problems")
 
 ;;; Solutions
-
 (solvesProblem squealingDirtyRimBrakes (ListFn cleanPads buffPads))
-(solvesProblem sequealingMisplacedPads (ListFn toeInPads))
+(solvesProblem squealingMisplacedPads (ListFn toeInPads))
 (solvesProblem squealingOutdatedRimPads (ListFn replacePads))
 (solvesProblem squealingDirtyDiscBrakes (ListFn cleanPads buffPads buffRotor))
 (solvesProblem squealingHeatedBrakes (ListFn stopDownhil biggerRotor))
 (solvesProblem squealingOutdatedDiscPads (ListFn replacePads))
-
 (solvesProblem rubbingMisassembledWheel (ListFn reattachWheel))
 (solvesProblem rubbingMisassembledWheel (ListFn reattachWheel))
 (solvesProblem rubbingMisplacedRimPads (ListFn adjustPadOrientation))
-(solvesProblem rubbingWobbelingRim (ListFn trueRim))
-(solvesProblem rubbingWobbelingRim (ListFn trueRim))
+(solvesProblem rubbingWobblingRim (ListFn trueRim))
+(solvesProblem rubbingWobblingRim (ListFn trueRim))
 (solvesProblem rubbingCloseRimPads (ListFn releaseCable adjustLever))
 (solvesProblem rubbingFarRimPads (ListFn adjustBrakeScrew))
 (solvesProblem rubbingMisplacedDiscPads (ListFn adjustPadPosition))
 (solvesProblem rubbingBrokenRotor (ListFn replaceRotor))
 (solvesProblem rubbingBrokenRotor (ListFn replaceRotor))
 (solvesProblem rubbingMisspacedDiscPads (ListFn turnBarrelAdjuster centerCalipers))
-
 (solvesProblem weakBrakeLever (ListFn adjustBrakeCable))
 (solvesProblem weakWornPads (ListFn replacePads))
 (solvesProblem weakFarRimPads (ListFn toeInPads adjustBrakeScrew))
@@ -583,45 +529,71 @@
 (solvesProblem weakBrakeCable (ListFn replaceCable))
 (solvesProblem weakBrakeHousing (ListFn replaceHousing))
 (solvesProblem weakDirtyDiscBrakes (ListFn cleanPads cleanRotor bleeding))
-
 (solvesProblem squealingChain (ListFn addLube))
-
 (solvesProblem skippingRustyChain (ListFn addLube))
 (solvesProblem skippingStiffChain (ListFn addLube))
-
 (solvesProblem creakingPedals (ListFn tightenPedal))
-
 (solvesProblem creakingHandlebarLooseStem (ListFn tightenStem))
 (solvesProblem creakingHandlebarLooseAttachement (ListFn tightenAttachment))
-
 (solvesProblem creakingWobbleWheel (ListFn reattachWheel))
-
 (solvesProblem shiftUpRearProblem (ListFn tightenRearDerailleur))
 (solvesProblem shiftDownRearProblem (ListFn loosenRearDerailleur))
 (solvesProblem shiftUpFrontProblem (ListFn loosenFrontDerailleur))
 (solvesProblem shiftDownFrontProblem (ListFn tightenFrontDerailleur))
 
-
+;;; Causes
+(causesProblem (TheSet (SymptomFn squealing brakes) (SymptomFn dirty rim) (SymptomFn smooth rim) (SymptomFn dirty pads) (SymptomFn smooth pads)) squealingDirtyRimBrakes)
+(causesProblem (TheSet (SymptomFn squealing brakes) (SymptomFn misplaced pads))  squealingMisplacedPads)
+(causesProblem (TheSet (SymptomFn squealing brakes) (SymptomFn outdated pads)) squealingOutdatedRimPads)
+(causesProblem (TheSet (SymptomFn squealing brakes) (SymptomFn smooth pads) (SymptomFn dirty pads) (SymptomFn smooth rotor) (SymptomFn dirty rotor)) squealingDirtyDiscBrakes)
+(causesProblem (TheSet (SymptomFn squealing brakes) (SymptomFn heated rotor)) squealingHeatedBrakes)
+(causesProblem (TheSet (SymptomFn squealing brakes) (SymptomFn vendor pads)) squealingOutdatedDiscPads)
+(causesProblem (TheSet (SymptomFn rubbing brakes) (SymptomFn tooTight dropouts) (SymptomFn tooTight wheel)) rubbingMisassembledWheel)
+(causesProblem (TheSet (SymptomFn rubbing brakes) (SymptomFn tooLoose dropouts) (SymptomFn tooLoose wheel)) rubbingMisassembledWheel)
+(causesProblem (TheSet (SymptomFn rubbing brakes) (SymptomFn misplaced pads)) rubbingMisplacedRimPads)
+(causesProblem (TheSet (SymptomFn rubbing brakes) (SymptomFn wobbling wheel)) rubbingWobblingRim)
+(causesProblem (TheSet (SymptomFn rubbing brakes) (SymptomFn wobbling rim)) rubbingWobblingRim)
+(causesProblem (TheSet (SymptomFn rubbing brakes) (SymptomFn tooClose rim) (SymptomFn tooClose pads)) rubbingCloseRimPads)
+(causesProblem (TheSet (SymptomFn rubbing brakes) (SymptomFn farApart rim) (SymptomFn farApart pads)) rubbingFarRimPads)
+(causesProblem (TheSet (SymptomFn rubbing brakes) (SymptomFn misplaced pads) (SymptomFn misplaced rotor)) rubbingMisplacedDiscPads)
+(causesProblem (TheSet (SymptomFn rubbing brakes) (SymptomFn worn rotor)) rubbingBrokenRotor)
+(causesProblem (TheSet (SymptomFn rubbing brakes) (SymptomFn bent rotor)) rubbingBrokenRotor)
+(causesProblem (TheSet (SymptomFn rubbing brakes) (SymptomFn tooClose pads) (SymptomFn tooClose rotor)) rubbingMisspacedDiscPads)
+(causesProblem (TheSet (SymptomFn weak brakes) (SymptomFn hits lever) (SymptomFn hits handlebar)) weakBrakeLever)
+(causesProblem (TheSet (SymptomFn weak brakes) (SymptomFn worn pads)) weakWornPads)
+(causesProblem (TheSet (SymptomFn weak brakes) (SymptomFn farApart rim) (SymptomFn farApart pads)) weakFarRimPads)
+(causesProblem (TheSet (SymptomFn weak brakes) (SymptomFn misplaced pads)) weakMisplacedPads)
+(causesProblem (TheSet (SymptomFn weak brakes) (SymptomFn dirty rim) (SymptomFn dirty pads)) weakDirtyRimBrakes)
+(causesProblem (TheSet (SymptomFn weak brakes) (SymptomFn farApart pads) (SymptomFn farApart rotor)) weakFarDiscPads)
+(causesProblem (TheSet (SymptomFn weak brakes) (SymptomFn abnormalMovement cableHousing)) weakBrakeCable)
+(causesProblem (TheSet (SymptomFn weak brakes) (SymptomFn cracked brakeHousing)) weakBrakeHousing)
+(causesProblem (TheSet (SymptomFn weak brakes) (SymptomFn dirty pads) (SymptomFn dirty rotor)) weakDirtyDiscBrakes)
+(causesProblem (TheSet (SymptomFn squealing chain) (SymptomFn rusty chain)) squealingChain)
+(causesProblem (TheSet (SymptomFn skipping chain) (SymptomFn rusty chain)) skippingRustyChain)
+(causesProblem (TheSet (SymptomFn skipping chain) (SymptomFn stiff chain)) skippingStiffChain)
+(causesProblem (TheSet (SymptomFn creaking pedals) (SymptomFn tooClose pedals)) creakingPedals)
+(causesProblem (TheSet (SymptomFn creaking handlebar) (SymptomFn tooClose stem)) creakingHandlebarLooseStem)
+(causesProblem (TheSet (SymptomFn creaking handlebar) (SymptomFn wobbling wheel)) creakingHandlebarLooseAttachement)
+(causesProblem (TheSet (SymptomFn creaking wheel) (SymptomFn wobbling wheel)) creakingWobbleWheel)
+(causesProblem (TheSet (SymptomFn cantShift cog) (SymptomFn rear cog) (SymptomFn big cog)) shiftUpRearProblem)
+(causesProblem (TheSet (SymptomFn cantShift cog) (SymptomFn rear cog) (SymptomFn small cog)) shiftDownRearProblem)
+(causesProblem (TheSet (SymptomFn cantShift cog) (SymptomFn front cog) (SymptomFn big cog)) shiftUpFrontProblem)
+(causesProblem (TheSet (SymptomFn cantShift cog) (SymptomFn front cog) (SymptomFn small cog)) shiftDownFrontProblem)
 
 ;;; Rules
-
-;;; This rule allows us to find possible solutions for a given set of symptoms
+;;; This rule allows us to find possible errors for a given set of symptoms
 (<== (mightCauseProblem ?userSymptoms ?requiredSymptoms ?error)
 	(causesProblem ?requiredSymptoms ?error)
 	(subsetOf ?userSymptoms ?requiredSymptoms))
 
+;;; This rule allows us to find possible solutions for a given set of symptoms
 (<== (mightSolveProblem ?userSymptoms ?requiredForResolution ?resolution)
 	(solvesProblem ?error ?resolution)
 	(causesProblem ?requiredForResolution ?error)
 	(subsetOf ?userSymptoms ?requiredForResolution))
 
-
 ;;; Queries
-
 ;;; (solvesProblem ?error ?resolution)
-
 ;;; (causesProblem ?symptoms ?error)
-
 ;;; (mightSolveProblem (TheSet (SymptomFn dirty rim)) ?requiredForResolution ?resolutions)
-
 ;;; (mightCauseProblem (TheSet (SymptomFn dirty rim)) ?requiredForError ?error)
